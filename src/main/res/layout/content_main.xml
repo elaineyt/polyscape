@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tran.elaine.polyscapeapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:src="@drawable/intro"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:id="@+id/imageViewFG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="matrix"/>
+
+
+    <SeekBar
+        android:id="@+id/alphasb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/horizontalScrollView">
+
+        <LinearLayout
+            android:id="@+id/shapegallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+        />
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/filterpalette">
+
+        <LinearLayout
+            android:id="@+id/filtergallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:id="@+id/grayscaleEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/grayscale"
+                android:text="Greyscale\n"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/brightnessEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/brightness"
+                android:text="Increase\nBrightness"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/contrastEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/contrast"
+                android:text="Contrast\nFilter"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/hueEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/inverthue"
+                android:text="Invert\nHue"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/sepiaEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/sepia"
+                android:text="\nSepia"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/invertEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/invert"
+                android:text="\nInvert"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/blurEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/blur"
+                android:text="\nBlur"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/colorDepthEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_toLeftOf="@+id/filter"
+                android:drawableTop="@drawable/depth"
+                android:text="Decrease\nDepth"
+                android:background="@android:color/transparent"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/palette">
+
+        <LinearLayout
+            android:id="@+id/editgallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/chooseBG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/chooseIM"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:background="#E6E7E8"
+                android:drawableTop="@drawable/choosebackground"
+                android:text="Choose\nBackground"
+                android:layout_marginBottom="3dp"/>
+
+            <Button
+                android:id="@+id/chooseIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/filter"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/filter"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:background="#E6E7E8"
+                android:drawableTop="@drawable/chooseforeground"
+                android:text="Choose\nForeground" />
+
+            <Button
+                android:id="@+id/adjustments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:drawableTop="@drawable/adjustments"
+                android:layout_alignParentRight="true"
+                android:background="#E6E7E8"
+                android:text="Adjustments\n"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:drawableTop="@drawable/cropshape"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="#E6E7E8"
+                android:text="Choose\nShape" />
+
+            <Button
+                android:id="@+id/rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:background="#E6E7E8"
+                android:drawableTop="@drawable/rotate"
+                android:text="Rotate\n"
+                android:layout_alignTop="@+id/chooseIM"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/transparency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:drawableTop="@drawable/transparency"
+                android:layout_alignParentRight="true"
+                android:background="#E6E7E8"
+                android:text="Transparency\n"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/stamp"
+                android:layout_alignTop="@+id/chooseIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:background="#E6E7E8"
+                android:drawableTop="@drawable/stamp"
+                android:text="Stamp\n"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="60dp"
+                android:height="70dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="7dp"
+                android:paddingRight="1dp"
+                android:paddingLeft="1dp"
+                android:background="#E6E7E8"
+                android:text="Save\n"
+                android:drawableTop="@drawable/save"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"/>
+
+
+            </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <Switch
+        android:id="@+id/switchImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filterpalette"
+        android:textOff="Background"
+        android:textOn="Foreground"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/backgroundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/switchImage"
+        android:layout_below="@+id/filterpalette"
+        android:text="\nFilter Background      "
+        android:visibility="gone"
+    />
+
+    <TextView
+        android:id="@+id/foregroundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/switchImage"
+        android:layout_below="@+id/filterpalette"
+        android:text="\n Filter Foreground"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

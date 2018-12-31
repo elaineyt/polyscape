@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shapes>
+    <shape name="4-Pointed Star" file="fgfilter4star.png"/>
+    <shape name="Circle" file="fgfiltercircle.png"/>
+    <shape name="Diamond" file="fgfilterdiamond.png"/>
+    <shape name="Frame" file="fgfilterframe.png"/>
+    <shape name="Heart" file="fgfilterheart.png"/>
+    <shape name="Hexagon" file="fgfilterhexagon.png"/>
+    <shape name="Moon" file="fgfiltermoon.png"/>
+    <shape name="Pentagon" file="fgfilterpentagon.png"/>
+    <shape name="5-Pointed Star" file="fgfilterstar.png"/>
+    <shape name="Triangle" file="fgfiltertriangle.png"/>
+</shapes>
